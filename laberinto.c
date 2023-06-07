@@ -2,7 +2,7 @@
 #FUSES NOWDT, NOPUT,INTRC_IO,NOPROTECT, NOBROWNOUT,NOWRT
 #USE DELAY(internal = 8MHZ)
 
-//#include <LCD.c>
+#include <LCD.c>
 #use fast_io(b)
 #use fast_io(c)
 #use fast_io(a)
@@ -170,8 +170,8 @@ void pare()
 
 //---------------------funcion principal----------------------------------
 void main()
-{                                       // Inicializa el sensor ultrasonico
-   //lcd_init();
+{              
+   lcd_init();
    set_tris_b(0b01010101);
    port_b_pullups(255);
    output_b(0);
@@ -228,16 +228,13 @@ void main()
       }else{
           output_low(pin_e2);
       }
-      /*
+      
       lcd_gotoxy(1,1);
       printf(lcd_putc,"L%0.1f", ladoL); 
       lcd_gotoxy(6,1);
       printf(lcd_putc,"R%0.1f", ladoR); 
       lcd_gotoxy(12,1);
       printf(lcd_putc,"F%0.1f", frente); 
-       */
-      
-      
       
        if(frente<=7.5 && ladoR<12.0)
       {

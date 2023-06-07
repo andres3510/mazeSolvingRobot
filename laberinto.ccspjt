@@ -1,0 +1,16 @@
+[PROJECT]
+Target=build\default\production\laberinto.hex
+Processor_Text=PIC16F887
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=laberinto.c
+[build\default\production\laberinto.c]
+Type=4
+[mru-list]
+1=build\default\production\laberinto.c
+[build\default\debug\laberinto.c]
+Type=4
+[Units]
+Count=1
+1=laberinto (main)

@@ -1,0 +1,153 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     lcd
+008     lcdlat
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+021-024 MAIN.frente
+025-028 MAIN.ladoR
+029-02C MAIN.ladoL
+02D     lcd_init.i
+02D-030 distancia_cm.distancia
+02D-030 distancia_cm_L.distancia
+02D-030 distancia_cm_R.distancia
+02D-030 @PRINTF_L32D_733FPFPF.P1
+02D     MAIN.@SCRATCH1
+02E-031 lcd_init.LCD_INIT_STRING
+031     @PRINTF_L32D_733FPFPF.P1
+031-034 distancia_cm.tiempo
+031-034 distancia_cm_L.tiempo
+031-034 distancia_cm_R.tiempo
+032     lcd_init.@SCRATCH1
+032     @PRINTF_L32D_733FPFPF.@SCRATCH1
+033     @PRINTF_L32D_733FPFPF.@SCRATCH2
+034     @PRINTF_L32D_733FPFPF.@SCRATCH3
+035-038 @DIVFF.P1
+035-038 @FLT.P2
+035-036 @ITOF.P3
+035     @PRINTF_L32D_733FPFPF.@SCRATCH4
+036     @PRINTF_L32D_733FPFPF.@SCRATCH5
+037     @PRINTF_L32D_733FPFPF.@SCRATCH6
+038     @PRINTF_L32D_733FPFPF.@SCRATCH7
+039-03C @DIVFF.P1
+039-03C @FLT.P2
+039     @PRINTF_L32D_733FPFPF.@SCRATCH8
+03A-03D @MULFF.P1
+03A-03D @FTOSD.P2
+03A-03D @DIV3232.P3
+03A     lcd_putc.c
+03B     @delay_ms1.P1
+03B     lcd_gotoxy.x
+03C     lcd_gotoxy.y
+03D     lcd_gotoxy.address
+03D     @FLT.@SCRATCH1
+03D     @DIVFF.@SCRATCH1
+03E-041 @DIV3232.P1
+03E-041 @MULFF.P2
+03E     lcd_gotoxy.@SCRATCH1
+03E     @FLT.@SCRATCH2
+03E     @DIVFF.@SCRATCH2
+03E     @FTOSD.@SCRATCH1
+03F     lcd_send_byte.address
+03F     @DIVFF.@SCRATCH3
+040     lcd_send_byte.n
+040     @DIVFF.@SCRATCH4
+041     lcd_read_byte.low
+041     lcd_send_byte.@SCRATCH1
+041     @DIVFF.@SCRATCH5
+042     lcd_read_byte.high
+042     lcd_send_nibble.n
+042     @DIVFF.@SCRATCH6
+042     @MULFF.@SCRATCH1
+042     @DIV3232.@SCRATCH1
+043     lcd_read_byte.@SCRATCH1
+043     @MULFF.@SCRATCH2
+043     @DIV3232.@SCRATCH2
+044     @MULFF.@SCRATCH3
+044     @DIV3232.@SCRATCH3
+045     @MULFF.@SCRATCH4
+045     @DIV3232.@SCRATCH4
+046     @MULFF.@SCRATCH5
+046     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+088     lcdtris
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000018  lcd_send_nibble
+000025  lcd_read_nibble
+00002B  lcd_send_byte
+000031  lcd_read_byte
+00006B  lcd_init
+0000A9  @ITOF
+0000C6  @FLT
+000105  @DIVFF
+0001CF  distancia_cm
+000271  distancia_cm_R
+000313  distancia_cm_L
+0003B5  avance_low
+0003C4  lcd_gotoxy
+0003D6  lcd_putc
+000402  @DIV3232
+000451  @PRINTF_L32D_733FPFPF
+000465  @MULFF
+0004EB  @FTOSD
+0005A4  pare
+0005B1  retroceso
+0005C0  giro
+0005D2  giro_L
+0005E4  derecha
+0005F2  izquierda
+000800  MAIN
+000800  @cinit1
+000816  @cinit2
+
+Project Directory:
+    C:\Users\andres\MPLABXProjects\laberinto.X\
+
+Project Files:
+    laberinto.c                                             [07-jun.-23 16:18  CRC=529947C3]
+    ..\..\..\..\Program Files (x86)\PICC\devices\16F887.H   [21-oct.-22 11:02  CRC=A60F11E5]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\LCD.c      [22-feb.-16 10:05  CRC=D1A6378A]
+
+Source signature=9BF4C8BC
+Program memory checksum=0000
+Hex file CRC=1A1E
+
+Units:
+    C:\Users\andres\MPLABXProjects\laberinto.X\laberinto (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+    Predefined symbols:
+       #define __16F887 1
+
+Output Files:
+    XREF file:   build\default\production\laberinto.xsym
+    Errors:      build\default\production\laberinto.err
+    Ext Symbols: build\default\production\laberinto.esym
+    INHX8:       build\default\production\laberinto.hex
+    Symbols:     build\default\production\laberinto.sym
+    List:        build\default\production\laberinto.lst
+    Debug/COFF:  build\default\production\laberinto.cof
+    Project:     laberinto.ccspjt
+    Call Tree:   build\default\production\laberinto.tre
+    Statistics:  build\default\production\laberinto.STA
